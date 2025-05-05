@@ -8,21 +8,23 @@
  * @description : Secktor,A Multi-functional whatsapp bot.
  * @version 0.0.6
  
-  cmd({
-             pattern: "weeb-pack",
-             category: "weeb",
+  bot(
+  {
+             pattern: weeb-pack?(.*) ,
+             type:  weeb,
              desc: "Searches Info about character."
          },
  **/
 
- const axios = require('axios')
+ const axios = require( axios )
  const { Anime, Manga ,Character  } = require("@shineiichijo/marika");
- const { tlang, cmd, fetchJson, getBuffer, prefix } = require('../lib/')
+ const { tlang, cmd, fetchJson, getBuffer, prefix } = require( ../lib/ )
      //---------------------------------------------------------------------------
 
- cmd({
-             pattern: "character",
-             category: "weeb",
+ bot(
+  {
+             pattern: character?(.*) ,
+             type:  weeb,
              desc: "Searches Info about character."
          },
          async(Void, citel, text) => {
@@ -30,7 +32,7 @@
              const client = new Character();
    
              const chara =await client.searchCharacter(text).catch((err) => {
-                 return citel.reply(`${tlang().greet} Couldn't find any result related to ${text}`)
+                 return citel.reply(`${tlang().greet} Couldn t find any result related to ${text}`)
              });
              let texty = "";
              texty += `🏮*Name: ${chara.data[0].name}*\n`;
@@ -45,9 +47,10 @@
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-  pattern: "ranime",
-  category: "weeb",
+ bot(
+  {
+  pattern: ranime?(.*) ,
+  type:  weeb,
   desc: "Info about random anime."
 },
 async(Void, citel, text) => {
@@ -72,9 +75,10 @@ async(Void, citel, text) => {
    }
 )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "anime",
-     category: "weeb",
+ bot(
+  {
+     pattern: anime?(.*) ,
+     type:  weeb,
      desc: "Searches Info about Anime and Provides result."
  },
  async(Void, citel, text) => {
@@ -129,9 +133,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-         pattern: "animenews",
-         category: "weeb",
+ bot(
+  {
+         pattern: animenews?(.*) ,
+         type:  weeb,
          desc: "Anime News"
      },
      async(Void, citel, text) => {
@@ -168,9 +173,10 @@ async(Void, citel, text) => {
      }
  )
  //---------------------------------------------------------------------------
- cmd({
-         pattern: "animepic",
-         category: "weeb",
+ bot(
+  {
+         pattern: animepic?(.*) ,
+         type:  weeb,
          desc: "Anime image"
      },
      async(Void, citel, text) => {
@@ -204,9 +210,10 @@ async(Void, citel, text) => {
      }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "neko",
-     category: "weeb",
+ bot(
+  {
+     pattern: neko?(.*) ,
+     type:  weeb,
      desc: "Sends a Neko Image in chat"
  },
  async(Void, citel, text) => {
@@ -225,9 +232,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-         pattern: "animewall",
-         category: "weeb",
+ bot(
+  {
+         pattern: animewall?(.*) ,
+         type:  weeb,
          desc: "Anime Wallpaper Random"
      },
      async(Void, citel, text) => {
@@ -265,9 +273,10 @@ async(Void, citel, text) => {
      }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "foxgirl",
-     category: "weeb",
+ bot(
+  {
+     pattern: foxgirl?(.*) ,
+     type:  weeb,
      desc: "Sends image of Fox Girl in current chat."
  },
  async(Void, citel, text) => {
@@ -283,9 +292,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "loli",
-     category: "weeb",
+ bot(
+  {
+     pattern: loli?(.*) ,
+     type:  weeb,
      desc: "Sends image of loli in current chat."
  },
  async(Void, citel, text) => {
@@ -306,9 +316,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "manga",
-     category: "weeb",
+ bot(
+  {
+     pattern: manga?(.*) ,
+     type:  weeb,
      desc: "Sends info about asked manga."
  },
  async(Void, citel, text) => {
@@ -347,9 +358,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "waifu",
-     category: "weeb",
+ bot(
+  {
+     pattern: waifu?(.*) ,
+     type:  weeb,
      desc: "Sends image of waifu in current chat."
  },
  async(Void, citel, text) => {
@@ -357,7 +369,7 @@ async(Void, citel, text) => {
        const buffer = await getBuffer(data.images[Math.floor(Math.random() * data.images.length)]?.url)
        Void.sendMessage(citel.chat, {
          image: buffer,
-         caption: '*Here we go*',
+         caption:  *Here we go* ,
          footer: tlang().footer,
        }, {
          quoted: citel
@@ -366,9 +378,10 @@ async(Void, citel, text) => {
     }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "pokepic",
-     category: "weeb",
+ bot(
+  {
+     pattern: pokepic?(.*) ,
+     type:  weeb,
      desc: "Sends image of pokemon in current chat."
  },
  async(Void, citel, text) => {
@@ -401,9 +414,10 @@ async(Void, citel, text) => {
  }
  )
  //---------------------------------------------------------------------------
- cmd({
-     pattern: "pokemon",
-     category: "weeb",
+ bot(
+  {
+     pattern: pokemon?(.*) ,
+     type:  weeb,
      desc: "Sends info of pokemon in current chat."
  },
  async(Void, citel, text) => {
@@ -413,7 +427,7 @@ async(Void, citel, text) => {
          let poinfo = `*•Name: ${data.name}*\n*•Pokedex ID: ${data.id}*\n*•Height: ${data.height}*\n*•Weight: ${data.weight}*\n*•Abilities: ${data.abilities[0].ability.name}, ${data.abilities[1].ability.name}*\n*•Base Experience: ${data.base_experience}*\n*•Type: ${data.types[0].type.name}*\n*•Base Stat: ${data.stats[0].base_stat}*\n*•Attack: ${data.stats[1].base_stat}*\n*•Defense: ${data.stats[2].base_stat}*\n*•Special Attack: ${data.stats[3].base_stat}*\n*•Special Defense:${data.stats[4].base_stat}*\n*•Speed: ${data.stats[5].base_stat}*\n`
          Void.sendMessage(citel.chat, { image: { url: data.sprites.front_default }, caption: poinfo }, { quoted: citel })
      } catch (err) {
-         citel.reply("Ahh,Couldn't found any pokemon.")
+         citel.reply("Ahh,Couldn t found any pokemon.")
          console.log(err)
      }
  
