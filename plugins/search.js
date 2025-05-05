@@ -9,19 +9,20 @@
  * @version 0.0.6
  **/
 
-const moment = require('moment-timezone')
-const {fetchJson,cmd, tlang } = require('../lib')
+const moment = require( moment-timezone )
+const {fetchJson,cmd, tlang } = require( ../lib )
 let gis = require("async-g-i-s");
-const axios = require('axios')
-const fetch = require('node-fetch')
+const axios = require( axios )
+const fetch = require( node-fetch )
 
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "imdb",
-            category: "search",
+bot(
+  {
+            pattern: imdb?(.*) ,
+            type:  search,
             desc: "Sends image of asked Movie/Series.",
-            use: '<text>',
-            filename: __filename,
+            
+            
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply(`_Name a Series or movie ${tlang().greet}._`);
@@ -58,12 +59,13 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "weather",
-            category: "search",
+bot(
+  {
+            pattern: weather?(.*) ,
+            type:  search,
             desc: "Sends weather info about asked place.",
-            use: '<location>',
-            filename: __filename,
+            use:  <location> ,
+            
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply("Give me location.Baka!!");
@@ -88,19 +90,20 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "horo",
-            category: "search",
+bot(
+  {
+            pattern: horo?(.*) ,
+            type:  search,
             desc: "Gives horoscope info of user.",
-            use: '<sign>\n:Example: horo libra',
-            filename: __filename,
+            use:  <sign>\n:Example: horo libra ,
+            
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply("Provide me a sign!")
             try {
                 const URL = `https://aztro.sameerkumar.website/?sign=${text}&day=today`;
                 fetch(URL, {
-                        method: 'POST'
+                        method:  POST 
                     })
                     .then(response => response.json())
                     .then(json => {
@@ -125,18 +128,19 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-    cmd({
-        pattern: "google",
-        alias :['search','gsearch'],
-        category: "search",
+    bot(
+  {
+        pattern: google?(.*) ,
+        alias :[ search , gsearch ],
+        type:  search,
         desc: "Sends info of given query from Google Search.",
-        use: '<text>',
-        filename: __filename,
+        
+        
     },
     async(Void, citel, text) => {
         if (!text) return citel.reply(`give me a query\n*Example : .google Who is Suhail Tech.*`);
-        let google = require('google-it');
-        google({ 'query': text}).then(res => {
+        let google = require( google-it );
+        google({  query : text}).then(res => {
             let msg= `🦄xʟɪᴄᴏɴ ɢᴏᴏɢʟᴇ sᴇᴀʀᴄʜ  : ${text} \n\n`;
             for (let g of res) {
                 msg+= `📌 Title : ${g.title}\n`;
@@ -149,18 +153,19 @@ cmd({
     }
 )
     //---------------------------------------------------------------------------
-cmd({
-        pattern: "image",
-        category: "search",
+bot(
+  {
+        pattern: image?(.*) ,
+        type:  search,
         desc: "Searches Image on Google",
-        use: '<text>',
-        filename: __filename,
+        
+        
     },
     async(Void, citel, text) => {
         if (!text) return citel.reply("Provide me a query!")
-        if (!text) return reply("Hey bie please tell me for which pic you're looking");
+        if (!text) return reply("Hey bie please tell me for which pic you re looking");
         let name1 = text.split("|")[0]
-        let name2 = '5'; 
+        let name2 =  5 ; 
         citel.reply(`Sending ${name2} image(s) of ${name1} in chat`)
         for (let i = 0; i < parseInt(name2); i++) {
             let n = await gis(name1)
@@ -174,38 +179,40 @@ cmd({
 
 
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "couplepp",
-            category: "search",
+bot(
+  {
+            pattern: couplepp?(.*) ,
+            type:  search,
             desc: "Sends two couples pics.",
-            filename: __filename,
+            
         },
         async(Void, citel, text) => {
-            let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
+            let anu = await fetchJson( https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json )
             let random = anu[Math.floor(Math.random() * anu.length)]
             Void.sendMessage(citel.chat, { image: { url: random.male }, caption: `🦄xʟɪᴄᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴅᴇʀ` }, { quoted: citel })
             Void.sendMessage(citel.chat, { image: { url: random.female }, caption: `🦄xʟɪᴄᴏɴ ɪᴍᴀɢᴇ ᴅᴏᴡɴʟᴏᴅᴇʀ` }, { quoted: citel })
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-        pattern: "iswa",
-        category: "search",
-        desc: "Searches in given rage about given number.",
-        use: '23470450352xx',
-        filename: __filename,
+bot(
+  {
+        pattern: iswa?(.*) ,
+        type:  search,
+        desc: "Searches in given rage about given number.?(.*) ,
+        use:  23470450352xx ,
+        
     },
     async(Void, citel, text) => {
         var inputnumber = text.split(" ")[0]
-        if (!inputnumber.includes('x')) return citel.reply('You did not add x\nExample: iswa 9196285162xx')
+        if (!inputnumber.includes( x )) return citel.reply( You did not add x\nExample: iswa 9196285162xx )
         citel.reply(`Searching for WhatsApp account in given range...`)
 
         function countInstances(string, word) {
             return string.split(word).length - 1;
         }
-        var number0 = inputnumber.split('x')[0]
-        var number1 = inputnumber.split('x')[countInstances(inputnumber, 'x')] ? inputnumber.split('x')[countInstances(inputnumber, 'x')] : ''
-        var random_length = countInstances(inputnumber, 'x')
+        var number0 = inputnumber.split( x )[0]
+        var number1 = inputnumber.split( x )[countInstances(inputnumber,  x )] ? inputnumber.split( x )[countInstances(inputnumber,  x )] :   
+        var random_length = countInstances(inputnumber,  x )
         var randomxx;
         if (random_length == 1) {   randomxx = 10 } 
         else if (random_length == 2) { randomxx = 100  } 
@@ -214,7 +221,7 @@ cmd({
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
         var nowhatsapp = `\n*Numbers with no WhatsApp account within provided range.*\n`
         for (let i = 0; i < randomxx; i++) {
-            var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+            var nu = [ 1 ,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ]
             var status1 = nu[Math.floor(Math.random() * nu.length)]
             var status2 = nu[Math.floor(Math.random() * nu.length)]
             var status3 = nu[Math.floor(Math.random() * nu.length)]
@@ -235,12 +242,12 @@ cmd({
                 try {
                     var anu1 = await Void.fetchStatus(anu[0].jid)
                 } catch {
-                    var anu1 = '401'
+                    var anu1 =  401 
                 }
-                if (anu1 == '401' || anu1.status.length == 0) {
+                if (anu1 ==  401  || anu1.status.length == 0) {
                     nobio += `wa.me/${anu[0].jid.split("@")[0]}\n`
                 } else {
-                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz('Africa/Lagos').format('HH:mm:ss DD/MM/YYYY')}\n\n`
+                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz( Africa/Lagos ).format( HH:mm:ss DD/MM/YYYY )}\n\n`
                 }
             } catch { nowhatsapp += `${number0}${i}${number1}\n` }
         }
