@@ -1,14 +1,12 @@
-nst { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib')
+const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib')
 const { download} = require('aptoide-scraper')
-
-cmd({
-    pattern: "playstore",
-    alias: ["downapk","playstore"],
-    desc: "download playstore app",
-    react: "📥",
-    category: "downloader",
-    filename: __filename,
-},
+bot(
+  {
+    pattern:  playstore ?(.*) ,
+    desc:  download playstore app ,
+    type:  weeb ,
+  },
+  
 async (Void, citel, text) => {
 if (!text) return
 try {
