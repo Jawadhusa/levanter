@@ -15,44 +15,48 @@ const { dare, truth, random_question } = require('../lib/truth-dare.js')
 const axios = require('axios')
 const { cmd } = require('../lib')
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "question",
+bot(
+  {
+            pattern: question?(.*) ,
             desc: "Random Question.",
-            category: "fun",
-            filename: __filename,
+            type:  fun,
+            
         },
         async(Void, citel, text) => {
             return await citel.reply(`${random_question()}`);
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "truth",
+bot(
+  {
+            pattern: truth?(.*) ,
             desc: "truth and dare(truth game.).",
-            category: "fun",
-            filename: __filename,
+            type:  fun,
+            
         },
         async(Void, citel, text) => {
             return await citel.reply(`${truth()}`);
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "dare",
+bot(
+  {
+            pattern: dare?(.*) ,
             desc: "truth and dare(dare game.).",
-            category: "fun",
-            filename: __filename,
+            type:  fun,
+            
         },
         async(Void, citel, text) => {
             return await citel.reply(`${dare()}`);
         }
     )
     //---------------------------------------------------------------------------
-cmd({
-        pattern: "fact",
+bot(
+  {
+        pattern: fact?(.*) ,
         desc: "Sends fact in chat.",
-        category: "fun",
-        filename: __filename,
+        type:  fun,
+        
     },
     async(Void, citel, text) => {
         const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
@@ -65,11 +69,12 @@ cmd({
 //-------------------------------------------------------
 
     //---------------------------------------------------------------------------
-    cmd({
-        pattern: "quotes",
+    bot(
+  {
+        pattern: quotes?(.*) ,
         desc: "Sends quotes in chat.",
-        category: "fun",
-        filename: __filename,
+        type:  fun,
+        
     },
     async(Void, citel, text) => {
         var quoo = await axios.get(`https://favqs.com/api/qotd`)
@@ -84,11 +89,12 @@ return citel.reply(replyf)
 
 )
     //---------------------------------------------------------------------------
-    cmd({
-        pattern: "define",
+    bot(
+  {
+        pattern: define?(.*) ,
         desc: "urban dictionary.",
-        category: "fun",
-        filename: __filename,
+        type:  fun,
+        
     },
     async(Void, citel, text) => {
         try{
@@ -104,10 +110,11 @@ return citel.reply(replyf)
     }
 )
 //------------------------------------------------------------------
-cmd({
-  pattern: 'chatgpt',
+bot(
+  {
+  pattern: chatgpt ?(.*) ,
   desc: 'Ask the AI a question',
-  category: "AI",
+  type:  fun,
   
 },
 async (Void, citel, text) => {
@@ -131,11 +138,12 @@ async (Void, citel, text) => {
   }
 });
 //----------------------------------COPY AND GIVE CREDIT-------
-cmd({
-  pattern: 'rizz',
-  category: "fun",
+bot(
+  {
+  pattern: rizz ?(.*) ,
+  type:  fun,
   desc: 'Get a random pickup line',
-  react: '🙈',
+  
 },
 async (Void, citel) => {
   try {
@@ -154,11 +162,12 @@ async (Void, citel) => {
   }
 });
 //--------------------COPY AND GIVE  CREDIT------------
-cmd({
-  pattern: 'bible',
+bot(
+  {
+  pattern: bible ?(.*) ,
   desc: 'Get a Bible verse',
   category: "RELIGION",
-  react: '🧎‍♂️',
+  
 },
 async (Void, citel, text) => {
   let verseReference = text.trim();
@@ -184,11 +193,11 @@ async (Void, citel, text) => {
   }
 });
 //-----------------COPY AND GIVE CREDIT------------------//
-cmd({
-  pattern: 'insult',
+bot(
+  {
+  pattern: insult ?(.*) ,
   desc: 'Get a random insult',
-  category: "fun",
-  react: '🤥',
+  type:  fun,
 },
 async (Void, citel) => {
   try {
