@@ -1,0 +1,758 @@
+{
+  "extra": {
+    "init_session": "[{0}] جاري تشغيل جلسة جديدة... خلّي عندك شوي كرامة ⏳",
+    "load_session": "[{0}] براجع حالة الجلسة... لا تكون مفرمتها بالغلط 🧐",
+    "invalid_session": "[{0}] {1} معرّف الجلسة *مضروب*، امسح وجهك وارجع سوي سكان من أول وجديد! ❌",
+    "success_session": "[{0}] الجلسة تم التحقق منها بنجاح... زي الفل بفضل جواد طبعاً ✅",
+    "connecting": "[{0}] بحاول أتصل... لا تقعد تنفخلي ⌛",
+    "connected": "[{0}] اتّصلنا بنجاح {1}... خلّك رايق ⚡",
+    "instance_close": "[{0}] الاتصال انقطع... زي علاقتك مع عقلك ❎",
+    "instance_restart": "[{0}] قاعد أعيد التشغيل... امسك أعصابك شوي ♻️",
+    "reconnect": "[{0}] أحاول أرجع الاتصال... محاولة رقم ({1})... لا تجيب لي الضغط 🔁",
+    "reconnect_after": "[{0}] برجع أتّصل بعد دقيقة... روح اشرب شاي وتعال ☕",
+    "another_login": "[{0}] الجلسة مفتوحة في جهاز ثاني... يا ترى منو اللي بيلعب بذيله؟ 📱",
+    "error_message": "```---تقرير الفشل الفخم---\n\nالنسخة : {0}\nالرسالة : {1}\nالخطأ   : {2}\nالمعرّف : {3}\nالأمر : {4}\nالنظام : {5}```\n\n```-----``` *مصنوع بفخر ودماغ كبير من الأسطورة جواد* ```-----```",
+    "deleted_message": "           تم حذف الرسالة... يمكن خاف من الحقيقة 🗑️",
+    "install_external_plugin": "[{0}] جاري تركيب إضافات خارجية... لا تسأل من وين جت 🔌",
+    "installed_external_plugin": "[{0}] الإضافات الخارجية انركبت... بمباركة جواد طبعاً ✨",
+    "plugin_install": "[{0}] أركّب الإضافات... لا تتدخل بشغل المحترفين ⚙️",
+    "plugin_installed": "[{0}] تم تركيب {1}... واشتغلت زي الحلاوة 🧩",
+    "plugins_installed": "[{0}] كل الإضافات شغّالة تمام... ريّح بالك ✅",
+    "plugin_install_error": "[{0}] صار خطأ أثناء تركيب {1}... انمسح خلاص، الله لا يرده ❌",
+    "plugin_not_found": "[{0}] الإضافة {1} مش موجودة (404)... انقلع من القائمة 🗂️",
+    "group_cmd": "هذا الأمر مخصص للقروبات فقط... لا تفشلنا لحالك ⛔"
+  }
+}
+  "plugins": {
+  "common": {
+    "reply_to_message": "رد على الرسالة يا طيّب 📩",
+    "not_admin": "أنا مش أدمن، لا تتهور ⚠️",
+    "reply_to_image": "رد على صورة يا فنان 🖼️",
+    "update": "_الإعدادات تحفظت بنجاح! مزاجك صار مفعل دلوقتي ✅_"
+  },
+  "afk": {
+    "example": "> *طريقة استخدام AFK:*\n- تفعل AFK: *afk [السبب]*\n- مثال: *afk مشغول مع الحياة السودة* ⏱️ شوهد آخر مرة #lastseen\n- أول ما ترسل رسالة، AFK بيطير لحالو\n- تطفي AFK: *afk off*",
+    "not_afk": "رجعت للحياة... مش AFK خلاص 💥",
+    "desc": "حط حالك في وضع الهارب من الكيبورد AFK"
+  },
+  "alive": {
+    "default": "لسا عايش (مو مصدي)\nالمدة شغّالة: #uptime ⚡",
+    "desc": "يعرض حالة البوت إذا كان صاحي ولا نايم 🛌"
+  },
+  "antifake": {
+    "example": "*وضعية مكافحة الأرقام المزيفة:* {0}\n\n> *أمثلة استخدام:*\n- *antifake list* - عرض رموز الدول\n- *antifake !91,1* - تحديد الدول المسموحة أو الممنوعة\n- *antifake on | off* - شغل أو طفي المكافحة",
+    "desc": "كفش الأرقام الفايك وامنَعها ❌",
+    "not": "مافيش رموز دولية تتحط، ريّح دماغك.",
+    "status": "الفلتر الفايك بقى *{0}* دلوقتي.",
+    "update": "> تم التحديث ✅\n*مسموح:* {0}\n*ممنوع:* {1}"
+  },
+  "antilink": {
+    "desc": "منع الروابط التخريبية في القروب 🛡️",
+    "disable": "_الروابط أصلاً مقفولة من زمان._",
+    "antilink_notset": "لسا ما ضبطت إعدادات الروابط.",
+    "status": "الروابط حالياً *{0}*",
+    "info": "> حالة منع الروابط: {0}\n*الروابط المسموح بها:* {1}\n*الإجراء:* {2}",
+    "action_invalid": "*الإجراء غلط، راجع نفسك.*",
+    "action_update": "الإجراء بقى كالتالي: *{0}*",
+    "update": "> تم التحديث ✅\n*مسموح:* {0}\n*ممنوع:* {1}",
+    "example": "وضعية الروابط: *{0}*\n\n> أمثلة استخدام:\n- antilink info - شوف الإعدادات\n- antilink whatsapp.com - اسمح برابط معين\n- antilink on | off - تشغيل أو إيقاف\n- antilink action/<kick | warn | null> - حدد وش تسوي باللي يخالف"
+  },
+  "antiword": {
+    "desc": "فلترة الكلام اللي يوجع الدماغ بالمجموعات 🧼",
+    "example": "وضع الفلترة: {0}\n> *أمثلة استخدام:*\n- antiword action/<kick | warn | null>* - الإجراء عند المخالفة\n- antiword on | off - شغل أو طفي\n- setvar ANTIWORDS:كلمة1,كلمة2,... - الكلمات الممنوعة",
+    "action_update": "الإجراء صار: *{0}*",
+    "status": "فلترة الكلمات حالياً *{0}*"
+  },
+  "apk": {
+    "desc": "نزّل تطبيقات APK من APKMirror بسرعة الصاروخ 🚀",
+    "example": "> *أمثلة استخدام:*\n- apk Mixplorer\n- apk whatsapp,apkm (يشمل الحزم)",
+    "no_result": "_مافي نتائج، جرب اسم تاني._",
+    "apps_list": "تطبيقات مطابقة ({0})"
+  },
+  "delete": {
+    "desc": "إسترجاع الرسائل المحذوفة (فضيحة المتطفلين) 🕵️‍♂️",
+    "example": "> *أمثلة استخدام:*\n- delete p - إرسال للمحادثة الخاصة\n- delete g - إرسال بنفس القروب\n- delete off - إيقاف\n- delete <jid> - إرسال لرقم محدد",
+    "invalid_jid": "*خطأ:* _JID مو صحيح_",
+    "dlt_msg_jid": " _الرسائل المحذوفة هتروح لـ: {0}_",
+    "dlt_msg_disable": "الاسترجاع طفى خلاص.",
+    "dlt_msg_sudo": "_هتبعتلك أو للمطور الرسائل المسروقة._",
+    "dlt_msg_chat": "_الرسائل ترجع في نفس المكان._"
+  },
+  "dlt": {
+    "desc": "احذف الرسائل اللي ترديت عليها (قبل ما يندم اللي كتبها) ⛔"
+  },
+  ...
+}
+"ffmpeg": {
+    "desc": "حوّل الفيديوهات أو المقاطع بصيغ مختلفة 🎥",
+    "example": "> *أمثلة استخدام:*\n- ffmpeg mp3 - يحوّل الفيديو لصوت\n- ffmpeg mp4 - يحوّل المقطع لفيديو\n- ffmpeg gif - يحوّله لصورة متحركة",
+    "processing": "_لحظة بس... جاري الطبخ في الأستوديو_ 🎬"
+  },
+  "flip": {
+    "desc": "اقلب صورة أو فيديو، فوق تحت ⬆️⬇️",
+    "example": "> *أمثلة استخدام:*\n- flip h - قلب أفقي\n- flip v - قلب عمودي",
+    "processing": "_ثواني أقلب الدنيا لك..._"
+  },
+  "ghost": {
+    "desc": "رسالة شبحية (تنحذف لحالها بعد ثانية) 👻",
+    "example": "*أرسل رسالة شبحية كده:* ghost <النص>",
+    "need_text": "*فين الكلام يا روح أمك؟*"
+  },
+  "google": {
+    "desc": "غوغل، بس على مزاج البوت! ابحث عن اللي نفسك فيه 🔍",
+    "example": "> *أمثلة استخدام:*\n- google طقس دبي\n- google صور قطط مجنونة"
+  },
+  "group": {
+    "desc": "تحكم بالقروب وكأنك الماستر... افتح، اقفل، غير الاسم، ووو 🔧",
+    "not_admin": "لازم تكون أدمن علشان تتحكم بالقروب، يا باشا",
+    "need_perm": "أنا مش قادر أعمل كده، محتاج صلاحيات أكتر",
+    "open": "القروب انفتح للكل. يلا قولوا اللي نفسكم فيه",
+    "close": "القروب تسكر. اسكتوا شوية",
+    "subject": "اسم القروب اتغير لـ: *{0}*",
+    "desc_update": "وصف القروب اتحدث ✅",
+    "restrict": "التحكم في صلاحيات الأعضاء صار *{0}*",
+    "promote": "العضو ده بقى أدمن. خليه يشوف شغله بقى",
+    "demote": "تم طرده من عالم الأدمنز. يرجع غلبان زي زمان",
+    "remove": "اتمسح من الوجود... برا القروب",
+    "add": "تمت الإضافة. استعدوا للدراما",
+    "revoke": "الرابط القديم تبخر. الجديد: {0}"
+  },
+  "inspect": {
+    "desc": "افحص رابط دعوة وشوف وش فيه قبل لا تدخل 🕵️",
+    "need_code": "هات رابط الدعوة يا ذكي",
+    "invalid_code": "رابط بايظ... جرب غيره"
+  },
+  "jid": {
+    "desc": "جب لك الـJID حق أي مستخدم، رسالة، أو قروب 🆔",
+    "example": "*رد على الشخص أو الرسالة، وأنا أجيبلك الـJID*"
+  },
+  "kick": {
+    "desc": "طرد المستخدمين اللي مزعجينك برا القروب ✋",
+    "not_admin": "مش أدمن، ما أقدر أطرد أحد",
+    "admin": "ما أقدر أطرد واحد من أهلي الأدمنز",
+    "need_user": "*حدد مين تبيني أطرده... مش قارئ أفكار أنا*"
+  },
+  "leave": {
+    "desc": "أخلي البوت يخرج من القروب ويرجع لحياته الخاصة 🚶",
+    "left": "وداعًا يا جماعة الخير... أنا طالع من هنا"
+  }
+"media": {
+    "desc": "حوّل الميديا بصيغ مختلفة، صور، صوت، فيديو... كلشي 🎛️",
+    "example": "> *أمثلة استخدام:*\n- media mp3 (يحول لفورمات صوتي)\n- media png (يحول لصورة)\n- media mp4 (يحول لفيديو)"
+  },
+  "ocr": {
+    "desc": "سحب النصوص من الصور... حتى لو مكتوب بخط صرصور 📸➡️✍️",
+    "example": "رد على صورة وأكتب: ocr"
+  },
+  "poll": {
+    "desc": "اعمل تصويت جماعي، وخلي الديموقراطية تشتغل 🗳️",
+    "example": "> *أمثلة:*\n- poll أحلى مطرب؟, عمرو دياب, تامر حسني, حماقي",
+    "need_question": "فين السؤال يا عبقري؟"
+  },
+  "quote": {
+    "desc": "اعمل اقتباس من رسالة، وخلي شكلها شيك ✨",
+    "example": "*رد على رسالة، وأكتب: quote*\n> يخليها شكلها كأنها مقتبسة"
+  },
+  "rename": {
+    "desc": "غيّر اسم أي ملف أو ميديا زي ما يعجبك 📝",
+    "example": "*رد على أي ميديا، واكتب:* rename اسم_جديد.mp3"
+  },
+  "screenshot": {
+    "desc": "صور لك موقع ويب كامل... من غير ما تفتح المتصفح 📷",
+    "example": "*اكتب:* screenshot https://example.com"
+  },
+  "short": {
+    "desc": "قصّر أي رابط طويل يخوف! 🔗✂️",
+    "example": "*اكتب:* short https://رابط_طويل_قوي.com"
+  },
+  "ss": {
+    "desc": "لقطة شاشة لأي موقع ويب (نفس screenshot) 🖥️",
+    "example": "اكتب: ss https://example.com"
+  },
+  "sticker": {
+    "desc": "حوّل الصور والفيديوهات لستيكرات نار 🔥",
+    "example": "> *أمثلة استخدام:*\n- رد على صورة/فيديو واكتب: sticker\n- أو أرسل صورة مباشرة مع الأمر"
+  },
+  "take": {
+    "desc": "غيّر اسم الباكج والكاتب لأي ستيكر زي ما تحب ✍️",
+    "example": "*اكتب:* take جواد, بوت فخم"
+  },
+  "tourl": {
+    "desc": "حوّل أي صورة أو فيديو لرابط تحميل مباشر 🌐",
+    "example": "*رد على صورة أو فيديو واكتب:* tourl"
+  },
+  "tts": {
+    "desc": "حوّل النص إلى صوت بصوت روبوتي رايق 🎙️",
+    "example": "*اكتب:* tts السلام عليكم",
+    "need_text": "فين الكلام اللي تبيني أقرأه؟"
+  },
+  "vote": {
+    "desc": "اعمل تصويت سريع (نعم / لا) ⚖️",
+    "example": "*اكتب:* vote هل تحبني؟"
+  },
+  "weather": {
+    "desc": "جبلك الطقس من قلب الغيمات ⛅",
+    "example": "*اكتب:* weather دبي"
+  },
+  "webss": {
+    "desc": "لقطة شاشة لصفحة ويب، بدقة عالية HD 🖼️",
+    "example": "*اكتب:* webss https://example.com"
+  },
+  "ytmp3": {
+    "desc": "حمّل أي فيديو من يوتيوب كـ MP3 🎵",
+    "example": "*اكتب:* ytmp3 رابط_الفيديو"
+  },
+  "ytmp4": {
+    "desc": "حمّل أي فيديو من يوتيوب بصيغة MP4 🎬",
+    "example": "*اكتب:* ytmp4 رابط_الفيديو"
+  },
+  "yts": {
+    "desc": "ابحث في يوتيوب بدون ما تطلع من الواتساب 🔎",
+    "example": "*اكتب:* yts أغانٍ حزينة"
+  }
+  "add": {
+  "desc": "ضيف عضو للقروب ✋",
+  "warning": "> بلاش تضيف أرقام مش محفوظة عندك، عشان واتساب بيكره كده وممكن يطيرك ✂️",
+  "not_admin": "أنا مش أدمن يا عم، مش هعرف أضيف حدا ⛔",
+  "invalid_number": "هات رقم مظبوط يا نجم. مثال: add 91987654321 ☎️",
+  "failed": "ما ظبطتش الإضافة... بعتله دعوة بدل كده ✉️"
+},
+"promote": {
+  "desc": "ارفع الزلمة أدمن وعيش الدور ⬆️",
+  "not_admin": "أنا مش أدمن، ما بوزّع صلاحيات على كيفي ❌",
+  "mention_user": "اذكر الزلمة أو رد على رسالته يا فهيم 🧠",
+  "already_admin": "الزلمة أصلاً أدمن، مش لازم تنفخ فيه أكتر ✋"
+},
+"demote": {
+  "desc": "رجّع الأدمن لحجمه الطبيعي ⬇️",
+  "not_admin": "ما بقدر أتحكم بالأدوار، ناقصني تاج الأدمن 👑",
+  "mention_user": "رد أو اذكر الشخص اللي بدك تطيره من الإدارة 🚫",
+  "not_admin_user": "هو مش أدمن أصلاً، بتكذب على مين؟"
+},
+"invite": {
+  "desc": "هات رابط الدعوة للجروب ✨",
+  "not_admin": "أنا مش أدمن، مش من حقي أوزع روابط يا غالي 🔐",
+  "success": "اتفضل رابط الجروب:\n{0} 🔗"
+},
+"mute": {
+  "desc": "حول الجروب لنظام حكم ديكتاتوري... الأدمنز بس ✋",
+  "not_admin": "مش أدمن، يعني ما بقدر أخلي الكل يسكت ❌",
+  "mute": "الجروب هيسكت لمدة {0} دقيقة 🧏‍♂️"
+},
+"unmute": {
+  "desc": "افتح باب الكلام للكل، خليه حفلة جماعية 🎉",
+  "not_admin": "أنا مش أدمن، مش بيدي يا معلم 🔓"
+},
+"join": {
+  "desc": "انضم لجروب برابط الدعوة ⚙️",
+  "invalid_link": "هات رابط دعوة واتساب مظبوط، مش خربيطك دي ❗",
+  "group_full": "الجروب مليان زحمة، مفيش مكان لحد تاني 🚫",
+  "success": "انضميت بنجاح... خليك محترم بقى ✅",
+  "request_sent": "بعتت طلب الدخول... ادعيلي يقبلوني ✋"
+},
+"revoke": {
+  "desc": "اقطع رابط الدعوة وخليهم يتحسروا عليه ✂️",
+  "not_admin": "ما بقدر ألعب بروابط الجروب، مش أدمن أصلاً 🔐"
+},
+"group_info": {
+  "desc": "اعرض بيانات الجروب بالملعقة 🥄",
+  "invalid_link": "هات رابط دعوة واتساب يا محترم ❗",
+  "details": "*الاسم:* {0}\n*ID الجروب:* {1}@g.us\n*المالك:* {2}\n*الأعضاء:* {3}\n*تاريخ الإنشاء:* {4}\n*الوصف:* {5}"
+},
+"common_members": {
+  "desc": "شوف أو اطرد الناس اللي موجودين في أكتر من جروب 🚷",
+  "found": "ما لقيتش ولا مشترك مشترك، الدنيا فاضية 🕳️"
+},
+"insta": {
+  "usage": "مثال: insta <رابط إنستغرام>",
+  "not_found": "مش لاقي حاجة... شكل الرابط معطوب 📵",
+  "desc": "نزّل بوستات وإنستا ستوريات وريلز وانبسط 💅"
+},
+"ison": {
+  "usage": "مثال: ison <رقم الموبايل>",
+  "not_exist": "`*مش موجود عالواتساب* ({0})❌`",
+  "exist": "\n*موجود عالواتساب* ({0})✅\n",
+  "privacy": "*مخبي حاله بالإعدادات* ({0})🔒",
+  "desc": "تأكد إذا الرقم موجود عالواتساب ولا لا ☎️"
+},
+"lydia": {
+  "usage": "استعمل: lydia on | off\nرد على رسالة أو اذكر شخص عشان تفعّل عليه.",
+  "activated": "شغلت ليديا... هتعيش معاكم 🧠",
+  "deactivated": "طفّيت ليديا، روّحتها البيت 📴",
+  "note": "الخاصية تشتغل بس من رد على رسالة يا شاطر.",
+  "desc": "فعّل أو عطّل روبوت الدردشة اللي بيصدع المخ شوية 🤖"
+},
+"rotate": {
+  "usage": "مثال: rotate يمين|يسار|flip (رد على فيديو)",
+  "not_found": "رد على فيديو وحدد الاتجاه صح (يمين، يسار، ولا قلبها فوق تحت) 🔄",
+  "desc": "لف الفيديو زي ما بدك... يمين يسار حتى اقلبه لو حابب ✌️",
+  "convert": "_قاعد يقلب الفيديو... استنى شوية_"
+}
+"mp3": {
+  "usage": "رد على فيديو أو مقطع صوتي وحوّله MP3 ⏩",
+  "not_found": "فين الفيديو أو الصوت يا حريف؟ رد عليهم الأول ⚠️",
+  "desc": "حوّل الفيديو لصوت، أو خلّي الصوت نغمة تشتغل في المود الغلط 🎶"
+},
+"photo": {
+  "usage": "رد على استيكر صورة عشان ترجعه صورة طبيعية 🖼️",
+  "desc": "حط الاستيكر على طاولة العمليات وطلّع منه صورة جاهزة للانستغرام ✂️"
+},
+"reverse": {
+  "usage": "رد على فيديو أو صوت عشان تعكس تشغيله ⏪",
+  "not_found": "هات فيديو أو صوت أول، ما تشتغلليش ساحر من غير أدوات ✋",
+  "desc": "رجّع الفيديو أو الصوت وخلّي كل حاجة تمشي بالعكس، حتى الكرامة لو حبيت ↩️"
+},
+"cut": {
+  "usage": "مثال: cut 0;30 (البدء;المدة) (رد على فيديو أو صوت)",
+  "not_found": "رد على فيديو أو صوت وحدد منين تبدأ ومدة القطع (مثلاً: 10;30) ✂️",
+  "desc": "اقطع جزء من فيديو أو صوت، زي لما تطفش شخص من حياتك 🧹"
+},
+"trim": {
+  "usage": "مثال: trim 10;30 (رد على فيديو)",
+  "not_found": "رد على فيديو وحدد وقت البداية والمدة (مثلاً: 60;30) ⏱️",
+  "desc": "اقصقص الفيديو بين وقتين محددين، عمليّة تجميل سريعة للفيديو ✂️"
+},
+"page": {
+  "usage": "مثال: page 1 (رد على صورة)",
+  "not_found": "رد على صورة واكتب رقم الصفحة... مش صعبة والله 📄",
+  "desc": "حوّل صورة لصفحة PDF، حبة شغل رسمي على المزاج 🧾",
+  "add": "تمت إضافة الصفحة رقم {0} للوثيقة ✅"
+},
+"pdf": {
+  "usage": "مثال: pdf ملاحظات (اكتب عنوان للـ PDF)",
+  "not_found": "هات عنوان للـ PDF الأول يا دحيح، مش هنخترعلك عنوان ⚠️",
+  "desc": "حوّل الصور لملف PDF، عشان لما تبعت مهزلة تبان بشكل أنيق 📚"
+},
+"merge": {
+  "usage": "مثال: merge 1 (رد على فيديو برقم الترتيب)",
+  "not_found": "رد على فيديو وحدد رقمه، مش ندمج عشوائي هنا ❗",
+  "desc": "ادمج كذا فيديو في واحد، خليهم فيلم درامي من إنتاجك 🎬",
+  "merge": "_دمج {0} فيديوهات... المونتاج شغال 🛠️_",
+  "add": "_تمت إضافة الفيديو رقم {0} ✅_"
+},
+"compress": {
+  "usage": "رد على فيديو وخليني أضغطهلك ✨",
+  "desc": "اضغط حجم الفيديو وخلّيه خفيف عالقلب... والموبايل كمان 🪶"
+},
+"bass": {
+  "usage": "مثال: bass 10 (رد على صوت أو فيديو)",
+  "desc": "ارفعلنا البيز يا أسطورة، خلّي السماعات ترقص تحت إيدك 🔊"
+},
+"treble": {
+  "usage": "مثال: treble 10 (رد على صوت أو فيديو)",
+  "desc": "زبط التربل وخلي الصوت يجلّط ودانهم بالنقاء العالي 🎧"
+},
+"histo": {
+  "usage": "رد على فيديو أو صوت عشان أطلعلك منه فيديو Histogram",
+  "desc": "حوّل الصوت لفيديو فيه ترددات... شغل DJ محترم بصرياً 🎛️"
+},
+"vector": {
+  "usage": "رد على صوت أو فيديو وخليه عرض بصري Vector",
+  "desc": "خلّي الصوت يرسم على الشاشة... فن تفاعلي يا فنان 🎨"
+}
+
+    "crop": {
+      "usage": "Example: crop 512,512,0,512 (reply to a video).",
+      "not_found": "Please reply to a video with valid crop dimensions in the format: out_w,out_h,x,y.",
+      "desc": "Crop a video to the specified dimensions.",
+      "xcrop": "Video width: *{0}*, height: *{1}*\nChoose output size in between."
+    },
+    "low": {
+      "usage": "Reply to an audio or video to lower the pitch.",
+      "desc": "Alter the audio pitch to a lower tone."
+    },
+    "pitch": {
+      "usage": "Reply to an audio or video to adjust the pitch.",
+      "not_found": "Please reply to an audio or video message.",
+      "desc": "Adjust the pitch of an audio file."
+    },
+    "avec": {
+      "usage": "Reply to an audio or video to convert it into a video format.",
+      "not_found": "Please reply to an audio or video message.",
+      "desc": "Convert an audio clip into a video."
+    },
+    "avm": {
+      "usage": "Reply with both audio and video to merge them.",
+      "desc": "Merge audio and video files into one.",
+      "audio_add": "_Audio added!_",
+      "video_add": "_Video added!_"
+    },
+    "black": {
+      "usage": "Reply to an audio or video to generate a video with a black background.",
+      "desc": "Convert an audio clip into a video with a black background."
+    },
+    "mediafire": {
+      "usage": "Example: mediafire <Mediafire URL>",
+      "not_found": "File not found. Please verify the URL and try again.",
+      "desc": "Download a file from Mediafire."
+    },
+    "mention": {
+      "usage": "Example: mention on | off | get\n(Reply to a message to target a specific user.)",
+      "desc": "Configure and manage the mention feature for automated replies.",
+      "not_activated": "Reply to mention not activated.",
+      "current_status": "Mention is {0}. For details, visit: https://levanter-plugins.vercel.app/faq",
+      "activated": "Reply-to mention activated.",
+      "deactivated": "Reply-to mention deactivated.",
+      "updated": "Mention settings updated."
+    },
+    "status": {
+      "usage": "Usage: status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
+      "desc": "Automatically manage the viewing of WhatsApp statuses."
+    },
+    "call": {
+      "usage": "Usage: call on | off",
+      "desc": "Automatically reject incoming calls."
+    },
+    "read": {
+      "usage": "Usage: read on | off",
+      "desc": "Enable or disable auto-reading of incoming messages."
+    },
+    "online": {
+      "usage": "Usage: online on | off",
+      "desc": "Keep your account status always online."
+    },
+    "movie": {
+      "usage": "Example: movie <movie title>",
+      "not_found": "Movie not found. Please verify the title and try again.",
+      "desc": "Fetch detailed movie information, including the full plot, from the OMDB API."
+    },
+    "msgs": {
+      "desc": "Display the group's message count for each member, including individual totals and last seen duration.",
+      "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
+      "msg_last": "*lastSeen :* {0} ago\n"
+    },
+    "reset": {
+      "usage": "Example: reset all OR reset <reply/mention>",
+      "desc": "Reset the message count for either the entire group or a specific member.",
+      "reset_all": "Everyones messages counts deleted",
+      "reset_one": "_@{0} messages counts deleted._"
+    },
+    "inactive": {
+      "usage": "> Examples:\n-inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\nif kick not mentioned, Just list",
+      "desc": "Identify or remove inactive members based on message count or inactivity duration. Append 'kick' to remove members.",
+      "inactives": "_Total inactives are : {0}_",
+      "removing": "_Removing {0} inactive members in 7 seconds_"
+    },
+    "amute": {
+      "usage": "Usage: amute <hour> <min>\n- amute on | off\n- amute info\n\nReply with text to set a mute message",
+      "desc": "Schedule automatic group muting at a specified time with an optional custom message.",
+      "not_found": "AutoMute settings not found.",
+      "already_disabled": "AutoMute already disabled.",
+      "enabled": "AutoMute Enabled.",
+      "disabled": "AutoMute Disabled.",
+      "invalid_format": "> Example:\n- amute 6 0\n- amute on | off\n- amute info\n\nReply with text to set a mute message.",
+      "scheduled": "Group will mute at {0}\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "aunmute": {
+      "usage": "Usage: aunmute <hour> <min>\n- aunmute on | off\n- aunmute info\nReply with text to set an unmute message",
+      "desc": "Schedule automatic group unmuting at a specified time with an optional custom message.",
+      "not_found": "AutoUnMute settings not found.",
+      "already_disabled": "AutoUnMute already disabled.",
+      "enabled": "AutoUnMute Enabled.",
+      "disabled": "AutoUnMute Disabled.",
+      "invalid_format": "> Example:\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\nReply with text to set an unmute message.",
+      "scheduled": "Group will unmute at {0}\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "zushi": {
+      "usage": "> Example:\n- zushi ping, sticker\n- To set all commands, type 'list' and then reply with the copied message (e.g., zushi copied_message).",
+      "desc": "Allows you to enable specific commands for use by others in the chat.",
+      "already_set": "{0} is already configured.",
+      "allowed": "*allowed commands for* @{0}\n{1}"
+    },
+    "yami": {
+      "usage": "Simply use: yami",
+      "desc": "Displays the list of commands that are currently allowed in this chat.",
+      "not_set": "No allowed commands have been set yet."
+    },
+    "ope": {
+      "usage": "Example: ope ping, sticker OR ope all",
+      "desc": "Deletes or unsets the specified allowed commands.",
+      "not_found": "No allowed commands found for {0}.",
+      "all_removed": "All allowed commands have been removed.",
+      "removed": "*removed commands for* @{0}\n{1}"
+    },
+    "pdm": {
+      "usage": "Usage: pdm on | off",
+      "desc": "Enable or disable automatic notifications for promote/demote events in the group.",
+      "not_found": "Please specify 'on' or 'off'. For example: pdm on",
+      "activated": "Promote/demote alert activated.",
+      "deactivated": "Promote/demote alert deactivated."
+    },
+    "ping": {
+      "desc": "Check the bot's response time (latency).",
+      "ping_sent": "Ping!",
+      "pong": "Pong! Response time: {0} ms"
+    },
+    "pinterest": {
+      "usage": "Example: pinterest <Pinterest URL>",
+      "not_found": "No media found. Please check the URL and try again.",
+      "desc": "Download Pinterest videos or images."
+    },
+    "plugin": {
+      "usage": "> Example:\n- plugin <Gist URL>\n- plugin list",
+      "desc": "Install external plugins by providing a Gist URL containing the plugin code, or list all installed plugins.",
+      "invalid": "Please provide a valid plugin URL or plugin name.",
+      "not_installed": "No plugins are currently installed.",
+      "installed": "Newly installed plugins: {0}"
+    },
+    "remove": {
+      "usage": "> Example:\b- remove <plugin_name>\n- remove all",
+      "desc": "Delete external plugins by specifying the plugin name or remove all installed plugins.",
+      "not_found": "Plugin *{0}* not found.",
+      "removed": "Plugins have been successfully removed."
+    },
+    "reboot": {
+      "desc": "Restart the bot instance using PM2.",
+      "starting": "Restarting..."
+    },
+    "fullpp": {
+      "usage": "Example: fullpp (reply to an image)",
+      "desc": "Set full-size profile picture.",
+      "updated": "Profile picture updated."
+    },
+    "jid": {
+      "desc": "Returns the JID of a user or chat. It checks for a mentioned user, a reply message, or defaults to the current chat's JID."
+    },
+    "left": {
+      "desc": "Leaves the current group. If additional text is provided, it will be sent before leaving."
+    },
+    "block": {
+      "usage": "Example: block (reply to or mention a user)",
+      "desc": "Blocks the specified user.",
+      "status": "Blocked"
+    },
+    "unblock": {
+      "usage": "Example: unblock (reply to or mention a user)",
+      "desc": "Unblocks the specified user.",
+      "status": "_Unblocked_"
+    },
+    "pp": {
+      "usage": "Example: pp (reply to an image)",
+      "desc": "Updates your profile picture using the image from the replied message."
+    },
+    "whois": {
+      "number": "*Number :* {0}",
+      "name": "*Name :* {0}",
+      "about": "*About :* {0}",
+      "setAt": "*setAt :* {0}",
+      "owner": "*Owner :* {0}",
+      "members": "*Members* : {0}",
+      "description": "*desc* : {0}",
+      "created": "*Created* : {0}",
+      "usage": "Example: whois <jid or user identifier>",
+      "desc": "Displays the profile picture and additional information (e.g., about, status) of a user or group."
+    },
+    "gjid": {
+      "desc": "Lists all group JIDs along with their group names."
+    },
+    "qr": {
+      "usage": "Example: qr test  OR  reply to a QR image with qr",
+      "desc": "Generate a QR code from the provided text or decode a QR code from a replied image."
+    },
+    "reddit": {
+      "usage": "Example: reddit <URL>",
+      "desc": "Downloads a video from the specified Reddit post using the provided URL.",
+      "error": "No video found for the given URL."
+    },
+    "rmbg": {
+      "usage": "Example: rmbg (reply to an image)",
+      "desc": "Removes the background from the replied image using the remove.bg API",
+      "key": "To use this command, ensure you have signed up at remove.bg, verified your account, copied your API key, and set it using .setvar RMBG_KEY:<your_api_key> (e.g., .setvar RMBG_KEY:GWQ6jVy9MBpfYF9SnyG8jz8P). SIGNUP: https://accounts.kaleido.ai/users/sign_up | API KEY: https://www.remove.bg/dashboard#api-key",
+      "error": "Missing API key or image. Please set your API key and reply to an image."
+    },
+    "setschedule": {
+      "usage": "> *Example :*\n- setschedule jid,min-hour-day-month (in 24 hour format, day and month optional)\n- setschedule 91987654321@s.whatsapp.net, 9-9-13-8\n- setschedule 91987654321@s.whatsapp.net, 0-10 (send message daily at 10 am)\n- setschedule 91987654321@s.whatsapp.net, 0-10, once (send message at 10 am, one time)",
+      "desc": "Schedule a message to be sent automatically at a specified time. Provide the target JID(s) and time (in minutes-hour-day-month format; day and month are optional). Reply to the message you want to schedule.",
+      "invalid": "Invalid schedule format or time. Please follow one of the examples provided.",
+      "no_reply": "Please reply to the message that you want to schedule for sending.",
+      "scheduled": "_Successfully scheduled to send at_ *{0}* _in_ @{1}."
+    },
+    "getschedule": {
+      "desc": "Retrieve all scheduled messages for the specified chat.",
+      "not_found": "There are no scheduled messages.",
+      "time": "Time : {0}"
+    },
+    "delschedule": {
+      "usage": "> Example:\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
+      "desc": "Delete a scheduled message by specifying the target JID and time, or remove all scheduled messages.",
+      "invalid": "Invalid format. Please follow one of the examples.",
+      "not_found": "Schedule not found.",
+      "deleted": "_Schedule deleted._"
+    },
+    "setstatus": {
+      "usage": "Example: setstatus jid,jid,jid,... OR setstatus contact",
+      "desc": "Set a WhatsApp status for specific contacts or for imported contacts. Reply to a message (text, image, or video) to set the status.",
+      "reply_required": "Please reply to a message to set the status.",
+      "sent": "_Status sent to {0} contacts._"
+    },
+    "scstatus": {
+      "usage": "Examples:\n- scstatus jid,jid,jid,...|min-hour-day-month (day and month optional)\n- scstatus contact|min-hour-day-month\n- scstatus delete all|min-hour-day-month\n- scstatus list",
+      "desc": "Schedule a WhatsApp status to be sent at a specified time. Use 'contact' for imported contacts or provide specific JIDs.",
+      "reply_required": "Please reply to a message to schedule the status.",
+      "invalid": "Invalid format. Please follow one of the examples provided.",
+      "scheduled": "_Successfully scheduled to send at_ {0}.",
+      "list": "Scheduled status list:",
+      "deleted": "Schedule deleted."
+    },
+    "antispam": {
+      "usage": "Usage: antispam on | off",
+      "desc": "Enable or disable the AntiSpam feature for the group.",
+      "activated": "AntiSpam activated.",
+      "deactivated": "AntiSpam deactivated."
+    },
+    "sticker": {
+      "desc": "Convert an image or video to a sticker. Reply to an image or video message to generate a sticker.",
+      "reply_required": "Please reply to an image or video."
+    },
+    "circle": {
+      "desc": "Convert an image into a circular sticker.",
+      "reply_required": "Please reply to an image."
+    },
+    "take": {
+      "usage": "Example: take <title,artists,url> (reply to a sticker or audio). For audio, title is required; artists and URL are optional.",
+      "desc": "Change the sticker pack by updating its metadata. If replying to a sticker, update its pack metadata. If replying to audio, add metadata (title, artists, URL) to the file.",
+      "reply_required": "Please reply to a sticker or audio message.",
+      "additional_info": "For audio metadata, the artists or URL are optional."
+    },
+    "mp4": {
+      "desc": "Convert an animated sticker (WebP) into an MP4 video.",
+      "reply_required": "Please reply to an animated sticker."
+    },
+    "story": {
+      "usage": "Example: story <username> (or reply to a message containing the username)",
+      "desc": "Download Instagram stories for the specified username. If multiple stories are available, a list will be provided for selection.",
+      "not_found": "No stories found for the provided username.",
+      "list": "Total {0} stories available. Please select one to download.\n"
+    },
+    "tag": {
+      "usage": "Example: tag all | tag admin | tag notadmin | tag <custom message> (or reply to a message with 'tag')",
+      "desc": "Tag members in the group based on your choice. Use 'all' to mention every member, 'admin' to mention only group admins, 'notadmin' to mention non-admin members, or provide a custom message to be sent along with the mentions."
+    },
+    "tictactoe": {
+      "usage": "Example: tictactoe <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
+      "desc": "Play a TicTacToe game against an opponent. Challenge a user by mentioning them, replying to their message, or specifying their JID. Use 'tictactoe end' to finish the game and 'tictactoe restart <opponent_jid>' to restart with a new opponent.",
+      "choose_opponent": "Please choose an opponent by replying to a message or mentioning a user. You cannot play against yourself.",
+      "game_ended": "Game ended.",
+      "game_restarted": "Game restarted with the new opponent.",
+      "invalid_input": "Invalid input. Please provide a valid opponent or use 'end' or 'restart' appropriately.",
+      "players": "Players",
+      "already_occupied": "_Already Occupied_",
+      "current_player": "currentPlayer",
+      "game_finish": "Game Finish 🏁",
+      "winner": "Winner"
+    },
+    "tiktok": {
+      "usage": "Usage: tiktok <TikTok URL> (or reply to a message with the URL)",
+      "desc": "Download a TikTok video from the provided URL.",
+      "not_found": "Video not found. Please verify the URL and try again."
+    },
+    "tog": {
+      "usage": "Example: tog ping off",
+      "desc": "Enable or disable a bot command.",
+      "invalid": "Invalid input. Use: tog <command> on|off (e.g., tog ping off)",
+      "self_reference": "Did you really want to kill me?",
+      "enabled": "{0} Enabled.",
+      "disabled": "{0} Disabled."
+    },
+    "trt": {
+      "usage": "Example: trt ml hi OR trt ml (reply to a text message)",
+      "desc": "Translate text using Google Translate. Specify the target language code (and optionally the source language code) when replying to a message."
+    },
+    "twitter": {
+      "usage": "Example: twitter <Twitter URL> (or reply to a message containing the URL)",
+      "desc": "Download a Twitter video. If multiple quality options are available, you'll be prompted to choose one.",
+      "not_found": "No video found for the provided Twitter URL.",
+      "choose_quality": "> Choose Video Quality\n"
+    },
+    "upload": {
+      "usage": "Example: upload <URL> (or reply to a message containing a URL)",
+      "desc": "Download media from a provided URL. For shortened Google Images URLs, the direct image URL is retrieved automatically."
+    },
+    "url": {
+      "usage": "Example: url OR url imgur (reply to an image or video)",
+      "desc": "Convert an image or video to a URL. Optionally, specify a parameter (e.g., 'imgur') to get the URL from a specific service."
+    },
+    "getvar": {
+      "usage": "Example: getvar sudo",
+      "desc": "Display the value of a variable. Provide the variable key (case-insensitive) to retrieve its value.",
+      "not_found": "{0} not found in vars."
+    },
+    "delvar": {
+      "usage": "Example: delvar sudo",
+      "desc": "Delete a variable by specifying its key.",
+      "not_found": "{0} not found in vars.",
+      "deleted": "{0} deleted."
+    },
+    "setvar": {
+      "usage": "Example: setvar key = value",
+      "desc": "Set a variable with a specific key and value. Use '=' to separate the key from the value.",
+      "success": "New var {0} added as {1}."
+    },
+    "allvar": {
+      "desc": "Display all stored variables in sorted order."
+    },
+    "vote": {
+      "usage": "> Example :\nvote q|What your favorite color?\no|😀|Blue\no|😊|Red",
+      "desc": "Initiate a vote in a WhatsApp group.",
+      "notes": "If no recipients are specified, the vote message will simply be sent to the current group.",
+      "no_vote": "No votes available!",
+      "total_vote": "total votes : *{0}*",
+      "delete_vote": "Delete the current vote to set a new one.",
+      "option_required": "two or more options required",
+      "question_required": "question required",
+      "vote": "React or reply option to vote.",
+      "vote_deleted": "_Vote deleted._",
+      "voted": "@{0} voted for {1}\n\n${2}"
+    },
+    "warn": {
+      "usage": "Example: warn @user OR warn reset @user. You can also reply to a user's message and type 'warn' or 'warn reset'.",
+      "desc": "Warn a user in the group chat. This command increases a user's warning count. If the count exceeds the limit, the user will be kicked from the group. Use 'warn reset' to clear a user's warnings.",
+      "reset_usage": "Example: warn reset @user (or reply to a user's message and type 'warn reset').",
+      "cannot_remove_admin": "I cannot remove an admin."
+    },
+    "wcg": {
+      "usage": "Examples:\n- wcg start (force start the word chain game)\n- wcg end (end the current game)\n- wcg <word> (play by continuing the word chain)",
+      "desc": "Word Chain Game: Participate by providing a word that continues the chain. Use 'wcg start' to force start a new game or 'wcg end' to stop the current game."
+    },
+    "wrg": {
+      "usage": "Examples:\n- wrg start (force start the random word game)\n- wrg end (end the current game)\n- wrg <word> (play by submitting a word)",
+      "desc": "Random Word Game: Engage in a game where you submit words in response to a random prompt. Use 'wrg start' to begin a new game or 'wrg end' to finish the game."
+    },
+    "yts": {
+      "usage": "Example: yts baymax",
+      "desc": "Search for YouTube videos by query or URL. If a valid YouTube URL is provided, detailed information for the first video is returned."
+    },
+    "song": {
+      "usage": "Example: song indila love story OR song <YouTube URL> (reply to a message is also supported)",
+      "desc": "Download a song from YouTube. If a URL is provided, the song is downloaded directly; otherwise, a search is performed and a list of results is generated for selection.",
+      "not_found": "No song found for the provided query or URL."
+    },
+    "video": {
+      "usage": "Example: video <YouTube URL> (or reply to a message with the URL)",
+      "desc": "Download a YouTube video. If a direct URL is provided, the video is downloaded; if a search query is provided, a list of results is generated for selection.",
+      "not_found": "No video found for the provided query or URL."
+    },
+    "update": {
+      "usage": "Example: update",
+      "desc": "Check for new updates. Displays available updates or confirms that the bot is up-to-date.",
+      "up_to_date": "Bot is already up-to-date.",
+      "available": "{0} new updates available:\n{1}"
+    },
+    "update_now": {
+      "usage": "Example: update now",
+      "desc": "Update the bot to the latest version.",
+      "up_to_date": "Bot is already up-to-date. No updates available.",
+      "updating": "Updating bot...",
+      "updated": "Bot has been successfully updated!"
+    },
+    "antigm": {
+      "usage": "> Usage:\n- antigm <on|off> — Enable or disable anti group mention\n- antigm <delete|warn|kick> — Set action when someone mentions the group\n- antigm ignore <jid,jid,jid,...> — Ignore anti group mention from specific groups",
+      "action": "Action updated: group mentions will now result in *{0}*.",
+      "filter": "Ignore JIDs updated for anti group mention.",
+      "enabled": "Anti group mention has been enabled.",
+      "disabled": "Anti group mention has been disabled."
+    }
+  }
+}
