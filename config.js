@@ -7,6 +7,7 @@ if (existsSync(configPath)) require('dotenv').config({ path: configPath })
 const toBool = (x) => x == 'true'
 const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
@@ -32,19 +33,19 @@ module.exports = {
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
   BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
+  STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'الستيكر بتاع جواد اللي يسرقوا gay',
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE,
   LOG_MSG: process.env.LOG_MSG || 'false',
-  RMBG_KEY: process.env.RMBG_KEY || 'null',
+  RMBG_KEY: process.env.RMBG_KEY || 'qfv1ExzUuZSxjTHx485UU8CD',
   BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
   LANG: (process.env.LANGUAG || 'en').toLowerCase(),
   WARN_LIMIT: process.env.WARN_LIMIT || 3,
   FORCE_LOGOUT: process.env.FORCE_LOGOUT || 'false',
   BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
   DISABLE_BOT: process.env.DISABLE_BOT || 'null',
-  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
-  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected &mention kicked_',
-  ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
+  ANTILINK_MSG: process.env.ANTILINK_MSG || '_تم التقاط رابط، &mention طار برا القروب ✂️_',
+  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_سبام مفضوح، &mention انمسح من القروب 🧹_',
+  ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_كلام ممنوع؟ &mention طرد فوري يا فاسق 🚫_',
   ANTIWORDS: process.env.ANTIWORDS || 'word',
   MENTION: process.env.MENTION || '',
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
@@ -63,13 +64,13 @@ module.exports = {
   PERSONAL_MESSAGE: (process.env.PERSONAL_MESSAGE || 'null').trim(),
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE || 'false',
   ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
-  ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
+  ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention برا يا بزر، ممنوع البوتات هنا ❌',
   WARN_MESSAGE:
     process.env.WARN_MESSAGE ||
-    '⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining',
+    '⚠️تحذيييير⚠️\n*العضو :* &mention\n*عدد التحذيرات :* &warn\n*المتبقي قبل الطرد :* &remaining',
   WARN_RESET_MESSAGE:
-    process.env.WARN_RESET_MESSAGE || `WARN RESET\nUser : &mention\nRemaining : &remaining`,
-  WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
+    process.env.WARN_RESET_MESSAGE || `تم تصفير التحذيرات\nالعضو : &mention\nالمتبقي : &remaining`,
+  WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention انطرد خلاص، خلّوه يتأدب 🦵',
   TRUECALLER: process.env.TRUECALLER,
   DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
   LIST_TYPE: (process.env.LIST_TYPE || 'text').trim(),
@@ -84,4 +85,4 @@ module.exports = {
   WHITE_LIST: process.env.WHITE_LIST || '',
   BOT_LANG: process.env.BOT_LANG || 'english',
   YT_COOKIE: process.env.YT_COOKIE,
-}
+           }
